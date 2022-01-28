@@ -1,34 +1,66 @@
 import { useParams } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-// Mbti 설명
+// Mbti 페이지 헤더 컴포넌트
+function Header({data}) {
+  let navigate = useNavigate();
+
+  function backHome() {
+    navigate('/');
+  }
+
+  return (
+    <>
+      <button onClick={backHome}>
+        <i class="fas fa-chevron-left"></i>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      <span>{data}-A / {data}-T : Know your MBTI</span>
+    </>
+  );
+
+}
+
+// Mbti 설명 컴포넌트
+// MBTI 캐릭터 이미지 넣어야해요
 function Description({data}) {
   return (
     <>
+      {/** MBTI 캐릭터 이미지 넣을 자리 */}
+
       {/** 성격유형 */}
       <div>
         <span>성격유형</span>
       </div>
       
       {/** 별명 */}
-      <span>
-        {data.nickname}
-      </span>
+      <div>
+        <span>
+          {data.nickname}
+        </span>
+      </div>
 
       {/** MBTI */}
-      <span>
-        {data.name}
-      </span>
+      <div>
+        <span>
+          {data.name}-A / {data.name}-T
+        </span>
+      </div>
 
       {/** MBTI 성격 */}
-      <span>
-        {data.description}
-      </span>
+      <div>
+        <span>
+          {data.description}
+        </span>
+      </div>
     </>
   )
 }
 
 
-// 장단점
+// MBTI 장단점 컴포넌트
 function ProsCons({data}) {
   // 배열 : 1. 장점, 2. 단점
   const propsCons = Object.keys(data);
@@ -56,7 +88,7 @@ function ProsCons({data}) {
   )
 }
 
-// 팩폭
+// MBTI 팩폭 컴포넌트
 function Fact({data}) {
   return (
     <>
@@ -72,18 +104,16 @@ function Fact({data}) {
   )
 }
 
-
+// MBTI 설명 페이지
 function Profile({data}) {
   const params = useParams();
   const profile = data[params.username];
   return (
     <>
-      <div>
-        <span>{profile.name} : Know your MBTI</span>
-        <Description data={profile} />
-        <ProsCons data={profile.prosCons} />
-        <Fact data={profile.fact} />
-      </div>
+      <Header data={profile.name} />
+      <Description data={profile} />
+      <ProsCons data={profile.prosCons} />
+      <Fact data={profile.fact} />
     </>
   )
 };
