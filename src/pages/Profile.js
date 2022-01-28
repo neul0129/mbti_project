@@ -14,7 +14,6 @@ function Header({data}) {
   return (
     <>
       <button onClick={backHome}>
-        <i class="fas fa-chevron-left"></i>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <span>{data}-A / {data}-T : Know your MBTI</span>
