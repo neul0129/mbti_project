@@ -44,7 +44,7 @@ function ProsCons({data}) {
             {/** 장단점 리스트 요소 */}
             <div>
               {data[props].map((el, idx) => (
-                <div className='propsCons_el' key={idx}>
+                <div className='propsCons-el' key={idx}>
                   {el}
                 </div>
               ))}
