@@ -104,7 +104,7 @@ function Fact({data}) {
 }
 
 // MBTI 직업 컴포넌트
-const Job = ({data}) => {
+function Job({data}) {
   return (
     <>
       <div>직업</div>
@@ -120,7 +120,7 @@ const Job = ({data}) => {
 }
 
 // MBTI 연애스타일 컴포넌트
-const Love = ({data}) => {
+function Love({data}) {
   return (
     <>
       <div>연애스타일</div>
