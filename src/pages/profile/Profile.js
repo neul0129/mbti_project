@@ -164,7 +164,7 @@ function Love({data}) {
       <ul>
         {data.map((el, idx) => 
           <li key={idx}>
-            {idx + 1}. {el}
+            {el}
           </li>
         )}
       </ul>
