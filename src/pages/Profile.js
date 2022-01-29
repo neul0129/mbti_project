@@ -103,6 +103,66 @@ function Fact({data}) {
   )
 }
 
+// MBTI 직업 컴포넌트
+const Job = ({data}) => {
+  return (
+    <>
+      <div>직업</div>
+      <ul>
+        {data.map((el, idx) => 
+          <li key={idx}>
+            {el}
+          </li>
+        )}
+      </ul>
+    </>
+  )
+}
+
+// MBTI 연애스타일 컴포넌트
+const Love = ({data}) => {
+  return (
+    <>
+      <div>연애스타일</div>
+      <ul>
+        {data.map((el, idx) => 
+          <li key={idx}>
+            {el}
+          </li>
+        )}
+      </ul>
+    </>
+  )
+}
+
+// MBTI 궁합 컴포넌트
+function Chemistry({data}) {
+  // 배열 : 1. 잘 맞는 MBTI, 2. 안 맞는 MBTI
+  const chemistry = Object.keys(data);
+
+  return (
+    <>
+      <div>궁합</div>
+      <ul>
+        {chemistry.map((chemistry, idx) => (
+          <li key={idx}>
+            {/** 궁합 title */}
+            <div>{chemistry}</div>
+            {/** 궁합 리스트 요소 */}
+            <div>
+              {data[chemistry].map((el, idx) => (
+                <div className='propsCons-el' key={idx}>
+                  {el}
+                </div>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
 // MBTI 설명 페이지
 function Profile({data}) {
   const params = useParams();
@@ -113,6 +173,9 @@ function Profile({data}) {
       <Description data={profile} />
       <ProsCons data={profile.prosCons} />
       <Fact data={profile.fact} />
+			<Job data={profile.job} />
+			<Love data={profile.love} />
+			<Chemistry data={profile.chemistry} />
     </>
   )
 };
