@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import './Profile.css';
 
 // Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
@@ -16,11 +17,23 @@ function Header({data}) {
       <button onClick={backHome}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
-      <span>{data}-A / {data}-T : Know your MBTI</span>
+      <span>{data} : Know your MBTI</span>
     </>
   );
-
 }
+function Navbar(){
+	return(
+	<div>
+			<a href='#description'> 성격유형</a>
+			<a href='#propsCons'> 장단점</a>
+			<a href='#fact'> 팩폭</a>
+			<a href='#job'> 직업</a>
+			<a href='#love'> 연애</a>
+			<a href='#chemistry'> 궁합</a>
+	</div>
+			);
+}
+
 
 // Mbti 설명 컴포넌트
 // MBTI 캐릭터 이미지 넣어야해요
@@ -30,7 +43,7 @@ function Description({data}) {
       {/** MBTI 캐릭터 이미지 넣을 자리 */}
 
       {/** 성격유형 */}
-      <div>
+      <div id='description'>
         <span>성격유형</span>
       </div>
       
@@ -44,7 +57,7 @@ function Description({data}) {
       {/** MBTI */}
       <div>
         <span>
-          {data.name}-A / {data.name}-T
+          {data.name}
         </span>
       </div>
 
@@ -66,7 +79,7 @@ function ProsCons({data}) {
 
   return (
     <>
-      <div>장단점</div>
+      <div id='propsCons'>장단점</div>
       <ul>
         {propsCons.map((props, idx) => (
           <li key={idx}>
@@ -91,7 +104,7 @@ function ProsCons({data}) {
 function Fact({data}) {
   return (
     <>
-      <div>팩폭</div>
+      <div id='fact'>팩폭</div>
       <ul>
         {data.map((el, idx) => (
           <li key={idx}>
@@ -107,7 +120,7 @@ function Fact({data}) {
 function Job({data}) {
   return (
     <>
-      <div>직업</div>
+      <div id='job'>직업</div>
       <ul>
         {data.map((el, idx) => 
           <li key={idx}>
@@ -123,7 +136,7 @@ function Job({data}) {
 function Love({data}) {
   return (
     <>
-      <div>연애스타일</div>
+      <div id='love'>연애스타일</div>
       <ul>
         {data.map((el, idx) => 
           <li key={idx}>
@@ -142,7 +155,7 @@ function Chemistry({data}) {
 
   return (
     <>
-      <div>궁합</div>
+      <div id='chemistry'>궁합</div>
       <ul>
         {chemistry.map((chemistry, idx) => (
           <li key={idx}>
@@ -170,6 +183,7 @@ function Profile({data}) {
   return (
     <>
       <Header data={profile.name} />
+			<Navbar />
       <Description data={profile} />
       <ProsCons data={profile.prosCons} />
       <Fact data={profile.fact} />
