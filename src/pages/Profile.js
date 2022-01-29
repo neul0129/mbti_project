@@ -127,7 +127,7 @@ const Love = ({data}) => {
       <ul>
         {data.map((el, idx) => 
           <li key={idx}>
-            {el}
+            {idx + 1}. {el}
           </li>
         )}
       </ul>
