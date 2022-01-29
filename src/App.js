@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
+import Home from './pages/home/Home';
+import Profile from './pages/profile/Profile';
 
 const data = {
   ENTP: {
@@ -17,8 +17,9 @@ const data = {
     love: ["상대방에게 답장이 없으면 괜히 잘못보낸게 아닌가 걱정됨", "상대방에게 거의 맞추려고 함"],
     chemistry: {
       '잘 맞는  MBTI': ["ENFP", "ESFJ", "ISFP"], 
-      '안 맞는  MBTI': ["ISFP", "INTP", "INFP"]
-    }
+      '안 맞는  MBTI': ["ISFP", "INTP", "INFP"],
+    },
+		image : './profile/image/ENTP.png',
   },
   ENTJ: {
     name: 'ENTJ',
@@ -35,7 +36,8 @@ const data = {
     chemistry: {
       '잘 맞는  MBTI': ["ENFP", "ESFJ", "ISFP"], 
       '안 맞는  MBTI': ["ISFP", "INTP", "INFP"]
-    }
+    },
+		image : './profile/image/ENTP.png',
   },
   INTJ: {
     name: 'INTJ',
@@ -52,7 +54,8 @@ const data = {
     chemistry: {
       '잘 맞는  MBTI': ["ENFP", "ESFJ", "ISFP"], 
       '안 맞는  MBTI': ["ISFP", "INTP", "INFP"]
-    }
+    },
+		image : './profile/image/ENTP.png',
   },
   INFJ: {
     name: 'INFJ',
@@ -69,7 +72,8 @@ const data = {
     chemistry: {
       '잘 맞는  MBTI': ["ENFP", "ESFJ", "ISFP"], 
       '안 맞는  MBTI': ["ISFP", "INTP", "INFP"]
-    }
+    },
+		image : 'src/pages/profile/image/ENFJ.png',
   },
 };
 
