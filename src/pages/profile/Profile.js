@@ -14,18 +14,24 @@ function Header({data}) {
 
   return (
     <>
-      <button onClick={backHome}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
-      <span>{data} : Know your MBTI</span>
+			<div className='profile_header'>
+				<button onClick={backHome} className='profile_goHome'>
+					<FontAwesomeIcon icon={faChevronLeft} />
+				</button>
+				<div className='profile_title'>
+					<span className='profile_title_mbti'>{data}</span> 
+					<span className='profile_title_description'>: Know your MBTI</span>
+				</div>
+			</div>
     </>
   );
 }
 function Navbar(){
 	return(
-	<div>
+	<div className='profile_navBar'>
 			<a href='#description'> 성격유형</a>
 			<a href='#propsCons'> 장단점</a>
+			<a href='#character'> 특징</a>
 			<a href='#fact'> 팩폭</a>
 			<a href='#job'> 직업</a>
 			<a href='#love'> 연애</a>
@@ -40,37 +46,55 @@ function Navbar(){
 function Description({data}) {
   return (
     <>
-      {/** MBTI 캐릭터 이미지 넣을 자리 */}
+		<div className='profile_description' id='description'>
+			<div className='profile_image_box'>
+				 <img src={data.image} alt='' />
+			</div>
+			<div>
+				{/** 성격유형 */}
+				<div className='profile_personality_type'>
+					<span>성격유형</span>
+				</div>
+				
+				{/** MBTI */}
+				<div className='profile_mbti'> 
+					<span>
+						{data.name}
+					</span> 
+				</div>
 
-      {/** 성격유형 */}
-      <div id='description'>
-        <span>성격유형</span>
-      </div>
-      
-      {/** 별명 */}
-      <div>
-        <span>
-          {data.nickname}
-        </span>
-      </div>
+				{/** 별명 */}
+				<div className='profile_nickname'>
+					<span>
+						{data.nickname}
+					</span>
+				</div>
 
-      {/** MBTI */}
-      <div>
-        <span>
-          {data.name}
-        </span>
-      </div>
-
-      {/** MBTI 성격 */}
-      <div>
-        <span>
-          {data.description}
-        </span>
-      </div>
+				{/** MBTI 성격 */}
+				<div className='profile_personality'>
+					<span>
+						{data.description}
+					</span>
+				</div>
+			</div>
+		</div>
     </>
   )
 }
 
+// MBTI 특징 컴포넌트
+function Character({data}) {
+  return (
+    <>
+		<div id='character'>
+      <div className='character_title'>특징</div>
+      <div className='character_content'>
+            {data}
+			</div>
+		</div>	
+    </>
+  )
+}
 
 // MBTI 장단점 컴포넌트
 function ProsCons({data}) {
@@ -181,15 +205,18 @@ function Profile({data}) {
   const params = useParams();
   const profile = data[params.username];
   return (
-    <>
-      <Header data={profile.name} />
-			<Navbar />
-      <Description data={profile} />
-      <ProsCons data={profile.prosCons} />
-      <Fact data={profile.fact} />
-			<Job data={profile.job} />
-			<Love data={profile.love} />
-			<Chemistry data={profile.chemistry} />
+		<>
+			<Header data={profile.name} />
+			<div className='profile_content'>
+				<Navbar />
+				<Description data={profile} />
+				<Character data={profile.character} />
+				<ProsCons data={profile.prosCons} />
+				<Fact data={profile.fact} />
+				<Job data={profile.job} />
+				<Love data={profile.love} />
+				<Chemistry data={profile.chemistry} />
+			</div>
     </>
   )
 };
