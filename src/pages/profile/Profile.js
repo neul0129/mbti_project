@@ -48,9 +48,9 @@ function Description({data}) {
     <>
 		<div className='profile_description' id='description'>
 			<div className='profile_image_box'>
-				 <img src={data.image} alt='' />
+				 <img src="src\pages\profile\image\ENFJ.png" alt='' />
 			</div>
-			<div>
+			<div className='profile_description_content'>
 				{/** 성격유형 */}
 				<div className='profile_personality_type'>
 					<span>성격유형</span>
@@ -205,7 +205,7 @@ function Profile({data}) {
   const params = useParams();
   const profile = data[params.username];
   return (
-		<>
+		<div className='profile'>
 			<Header data={profile.name} />
 			<div className='profile_content'>
 				<Navbar />
@@ -217,7 +217,7 @@ function Profile({data}) {
 				<Love data={profile.love} />
 				<Chemistry data={profile.chemistry} />
 			</div>
-    </>
+    </div>
   )
 };
 
