@@ -2,6 +2,8 @@
 :root {
 	background-color: black;
 	color: #fff;
+	--subpage-font-color: #D9E250;
+	--subpage-left-margin: 100px;
 }
 /* 헤더부분 뺀 컨텐트부분 */
 .profile_content{
@@ -20,7 +22,7 @@
 .profile_goHome{
 	height: 25px;
 	margin-top: 30px;
-	margin-left: 15px;
+	margin-left: 40px;
 }
 
 /* 제목 */
@@ -32,7 +34,7 @@
 
 /* 제목에서 mbti부분 */
 .profile_title_mbti{
-	color: #D9E250;
+	color: var(--subpage-font-color);
 }
 
 /* 제목에서 Know yout MBTI 부분 */
@@ -52,33 +54,36 @@
 /* 네브바 아이템들 */
 .profile_navBar > a {
 	text-decoration: none;
-	margin: 0px 60px;
+	margin: 0px 40px;
 	color: #fff;
 	height: 45px;
 }
 
 .profile_navBar > a:hover{
-	border-bottom: 3px solid #D9E250;
+	border-bottom: 3px solid var(--subpage-font-color);
 }
 
 /* Mbti 설명 */
 .profile_description{
 	display: flex;
-	
+	margin-top: 20px;
+	height: 350px;
 }
 
 /* Mbti 설명에서 이미지 큰 틀 */
 .profile_image_box{
 	float: left;
 	width: 50%;
-	height: 300px;
+	height: 350px;
 }
 
 /* Mbti 설명에서 오른쪽 */
 .profile_description_content{
 	float: left;
 	width: 50%;
-	height: 300px;
+	height: 250px;
+	margin: 100px 0px 0px 40px;
+	position: relative;
 }
 
 /* Mbti 설명에서 성격유형 */
@@ -88,31 +93,40 @@
 	height: 25px;
 	text-align: center;
 	padding-top: 4px;
+	position: absolute;
+	top: 5px;
 }
 
 /* Mbti 설명에서 mbti부분 */
 .profile_mbti{
-
+	position: absolute;
+	top: 0px;
+	left: 95px;
+	font-size: 35px;
+	color: var(--subpage-font-color);
 }
 
 /* Mbti 설명에서 별명부분 */
 .profile_nickname{
-
+	position: absolute;
+	top: 50px;
+	font-size: 2.5em;
 }
 
 /* Mbti 설명에서 성격부분 */
 .profile_personality{
-
+	position: absolute;
+	top: 120px;
 }
 
 /* 특징 */
-.character{
+#character{
 	
 }
 
 /* 특징 제목 */
 .character_title{
-
+	
 }
 
 /* 특징 내용 */
