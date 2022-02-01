@@ -215,10 +215,13 @@ function Profile({data}) {
   const params = useParams();
   const profile = data[params.username];
   return (
-		<div className='profile'>
+	<>	
+		<span className='profile_fix'>
 			<Header data={profile.name} />
+			<Navbar />
+		</span>	
+		<div className='profile'>
 			<div className='profile_content'>
-				<Navbar />
 				<Description data={profile} />
 				<Character data={profile.character} />
 				<ProCons data={profile.prosCons} />
@@ -228,6 +231,7 @@ function Profile({data}) {
 				<Chemistry data={profile.chemistry} />
 			</div>
     </div>
+	</>
   )
 };
 

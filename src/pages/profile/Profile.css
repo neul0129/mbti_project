@@ -9,11 +9,23 @@ scroll-behavior: smooth;
 	--subpage-font-color: #D9E250;
 	--subpage-left-margin: 100px;
 }
+
+.empty{
+	height: 500px;
+}
+
+.profile_fix{
+	width: 100%;
+	position: fixed;
+}
+
 /* 헤더부분 뺀 컨텐트부분 */
 .profile_content{
 	margin: 0 auto;
 	width: 80%;
+	padding-top: 250px;
 }
+
 
 /* 헤더 */
 .profile_header{
@@ -70,7 +82,6 @@ scroll-behavior: smooth;
 /* Mbti 설명 */
 .profile_description{
 	display: flex;
-	margin-top: 40px;
 	height: 400px;
 }
 
@@ -98,7 +109,7 @@ scroll-behavior: smooth;
 	text-align: center;
 	padding-top: 4px;
 	position: absolute;
-	top: 5px;
+	top: 9px;
 }
 
 /* Mbti 설명에서 mbti부분 */
@@ -129,9 +140,12 @@ scroll-behavior: smooth;
 	font-size: 16px;
 }
 
+.prosContent{
+	text-align: center;
+}
+
 .pros{
-	width: 300px;
-	float: left;
+	
 }
 
 
@@ -140,8 +154,9 @@ scroll-behavior: smooth;
 }
 
 #description, #character, #prosCons, #fact, #job, #love, #chemistry{
+	text-align: center;
 	min-height: 800px;	
-	margin: 200px 0px;
+	padding-top: 200px;
 }
 
 .profile_content_title{
@@ -152,7 +167,6 @@ scroll-behavior: smooth;
 
 ul{
 	list-style: none;
-	list-style-type: square;
 	padding-left: 20px;
 }
 li{
