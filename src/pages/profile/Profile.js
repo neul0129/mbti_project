@@ -30,8 +30,8 @@ function Navbar(){
 	return(
 	<div className='profile_navBar'>
 			<a href='#description'> 성격유형</a>
-			<a href='#propsCons'> 장단점</a>
 			<a href='#character'> 특징</a>
+			<a href='#prosCons'> 장단점</a>
 			<a href='#fact'> 팩폭</a>
 			<a href='#job'> 직업</a>
 			<a href='#love'> 연애</a>
@@ -87,39 +87,41 @@ function Character({data}) {
   return (
     <>
 		<div id='character'>
-      <div className='character_title'>특징</div>
+      <div className='profile_content_title'>특징</div>
       <div className='character_content'>
             {data}
 			</div>
-		</div>	
+    </div>	 
     </>
   )
 }
 
 // MBTI 장단점 컴포넌트
-function ProsCons({data}) {
+function ProCons({data}) {
   // 배열 : 1. 장점, 2. 단점
-  const propsCons = Object.keys(data);
+  const prosCons = Object.keys(data);
 
   return (
     <>
-      <div id='propsCons'>장단점</div>
-      <ul>
-        {propsCons.map((props, idx) => (
-          <li key={idx}>
-            {/** 장단점 title */}
-            <div>{props}</div>
-            {/** 장단점 리스트 요소 */}
-            <div>
-              {data[props].map((el, idx) => (
-                <div className='propsCons-el' key={idx}>
-                  {el}
-                </div>
-              ))}
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div id='prosCons'>
+        <div className='profile_content_title'>장단점</div>
+        <ul>
+          {prosCons.map((pros, idx) => (
+            <li key={idx} className='pros'>
+              {/** 장단점 title */}
+              <div>{pros}</div>
+              {/** 장단점 리스트 요소 */}
+              <div>
+                {data[pros].map((el, idx) => (
+                  <div className='propsCons-el' key={idx}>
+                    {el}
+                  </div>
+                ))}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
@@ -128,14 +130,16 @@ function ProsCons({data}) {
 function Fact({data}) {
   return (
     <>
-      <div id='fact'>팩폭</div>
-      <ul>
-        {data.map((el, idx) => (
-          <li key={idx}>
-            {el}
-          </li>
-        ))}
-      </ul>
+      <div id='fact'>
+        <div className='profile_content_title'>팩폭</div>
+        <ul>
+          {data.map((el, idx) => (
+            <li key={idx}>
+              {el}
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
@@ -144,14 +148,16 @@ function Fact({data}) {
 function Job({data}) {
   return (
     <>
-      <div id='job'>직업</div>
-      <ul>
-        {data.map((el, idx) => 
-          <li key={idx}>
-            {el}
-          </li>
-        )}
-      </ul>
+      <div id='job'>
+        <div className='profile_content_title'>직업</div>
+        <ul>
+          {data.map((el, idx) => 
+            <li key={idx}>
+              {el}
+            </li>
+          )}
+        </ul>
+      </div>
     </>
   )
 }
@@ -160,14 +166,16 @@ function Job({data}) {
 function Love({data}) {
   return (
     <>
-      <div id='love'>연애스타일</div>
-      <ul>
-        {data.map((el, idx) => 
-          <li key={idx}>
-            {el}
-          </li>
-        )}
-      </ul>
+      <div id='love'>
+        <div className='profile_content_title'>연애스타일</div>
+        <ul>
+          {data.map((el, idx) => 
+            <li key={idx}>
+              {el}
+            </li>
+          )}
+        </ul>
+      </div>
     </>
   )
 }
@@ -179,23 +187,25 @@ function Chemistry({data}) {
 
   return (
     <>
-      <div id='chemistry'>궁합</div>
-      <ul>
-        {chemistry.map((chemistry, idx) => (
-          <li key={idx}>
-            {/** 궁합 title */}
-            <div>{chemistry}</div>
-            {/** 궁합 리스트 요소 */}
-            <div>
-              {data[chemistry].map((el, idx) => (
-                <div className='propsCons-el' key={idx}>
-                  {el}
-                </div>
-              ))}
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div id='chemistry'>
+        <div className='profile_content_title'>궁합</div>
+        <ul>
+          {chemistry.map((chemistry, idx) => (
+            <li key={idx}>
+              {/** 궁합 title */}
+              <div>{chemistry}</div>
+              {/** 궁합 리스트 요소 */}
+              <div>
+                {data[chemistry].map((el, idx) => (
+                  <div className='propsCons-el' key={idx}>
+                    - {el}
+                  </div>
+                ))}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
@@ -211,7 +221,7 @@ function Profile({data}) {
 				<Navbar />
 				<Description data={profile} />
 				<Character data={profile.character} />
-				<ProsCons data={profile.prosCons} />
+				<ProCons data={profile.prosCons} />
 				<Fact data={profile.fact} />
 				<Job data={profile.job} />
 				<Love data={profile.love} />

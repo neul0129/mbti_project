@@ -1,4 +1,8 @@
 /* 전체 */
+html{
+scroll-behavior: smooth;
+}
+
 :root {
 	background-color: black;
 	color: #fff;
@@ -66,22 +70,22 @@
 /* Mbti 설명 */
 .profile_description{
 	display: flex;
-	margin-top: 20px;
-	height: 350px;
+	margin-top: 40px;
+	height: 400px;
 }
 
 /* Mbti 설명에서 이미지 큰 틀 */
 .profile_image_box{
 	float: left;
 	width: 50%;
-	height: 350px;
+	height: 400px;
 }
 
 /* Mbti 설명에서 오른쪽 */
 .profile_description_content{
 	float: left;
 	width: 50%;
-	height: 250px;
+	height: 300px;
 	margin: 100px 0px 0px 40px;
 	position: relative;
 }
@@ -120,21 +124,40 @@
 }
 
 /* 특징 */
-#character{
-	
-}
-
-/* 특징 제목 */
-.character_title{
-	
-}
-
 /* 특징 내용 */
 .character_content{
+	font-size: 16px;
+}
 
+.pros{
+	width: 300px;
+	float: left;
 }
 
 
+.propsCons-el{
+	margin: 10px 0px;
+}
+
+#description, #character, #prosCons, #fact, #job, #love, #chemistry{
+	min-height: 800px;	
+	margin: 200px 0px;
+}
+
+.profile_content_title{
+	font-size: 50px;
+	color: var(--subpage-font-color);
+	margin-bottom: 40px;
+}
+
+ul{
+	list-style: none;
+	list-style-type: square;
+	padding-left: 20px;
+}
+li{
+	margin: 10px 0px;
+}
 
 
 
