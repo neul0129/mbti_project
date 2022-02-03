@@ -5,6 +5,7 @@ import Profile from './pages/profile/Profile';
 const data = {
   ENTP: {
     name: 'ENTP',
+    color: '#A8BD5F',
     nickname: '열성적인 중재자',
     description: ' 내적신념이 깊은 정열적인 중재자 유형',
     character: "신중한 성격",
@@ -23,6 +24,7 @@ const data = {
   },
   ENTJ: {
     name: 'ENTJ',
+    color: '#A4D9D0',
     nickname: '열성적인 중재자',
     description: ' 내적신념이 깊은 정열적인 중재자 유형',
     character: "신중한 성격",
@@ -41,6 +43,7 @@ const data = {
   },
   INTJ: {
     name: 'INTJ',
+    color: '#DA7B6B',
     nickname: '열성적인 중재자',
     description: ' 내적신념이 깊은 정열적인 중재자 유형',
     character: "신중한 성격",
@@ -59,6 +62,7 @@ const data = {
   },
   INFJ: {
     name: 'INFJ',
+    color: '#BCCB85',
     nickname: '열성적인 중재자',
     description: ' 내적신념이 깊은 정열적인 중재자 유형',
     character: "신중한 성격",
