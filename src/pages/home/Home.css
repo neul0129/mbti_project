@@ -18,8 +18,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  row-gap: 1.5rem;
-  column-gap: 1.5rem;
+  row-gap: 0.3rem;
+  column-gap: 2rem;
 }
 
 /* 컨텐츠 아이템들 */
@@ -28,8 +28,8 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  height: 3rem;
-  font-size: 1.5rem;
+  height: 4rem;
+  font-size: 2rem;
 }
 
 .main_footer {
