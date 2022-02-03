@@ -286,7 +286,7 @@ const data = [
   // 15. ENFJ
   {
     name: 'ENFJ',
-    color: '#15325A',
+    color: '#3870BC',
     nickname: '열성적인 중재자',
     description: ' 내적신념이 깊은 정열적인 중재자 유형',
     character: "신중한 성격",
