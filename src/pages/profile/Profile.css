@@ -1,18 +1,5 @@
 /* 전체 */
-html{
-	scroll-behavior: smooth;
-}
 
-* {
-	margin: 0;
-}
-
-:root {
-	background-color: black;
-	color: #fff;
-	--subpage-font-color: #D9E250;
-	--subpage-left-margin: 100px;
-}
 
 .empty{
 	height: 500px;
@@ -37,7 +24,6 @@ html{
 .profile_header{
 	display: flex;
 	height: 100px;
-	margin-top: 20px;
 }
 
 /* 아이콘 */

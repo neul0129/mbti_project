@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
+import './App.css'
 
 const data = [
   // ISTJ
