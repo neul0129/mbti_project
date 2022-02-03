@@ -48,7 +48,7 @@ function Description({data}) {
     <>
 		<div className='profile_description' id='description'>
 			<div className='profile_image_box'>
-				 <img src="src\pages\profile\image\ENFJ.png" alt='' />
+				<img src="src\pages\profile\image\ENFJ.png" alt='' />
 			</div>
 			<div className='profile_description_content'>
 				{/** 성격유형 */}
@@ -213,7 +213,8 @@ function Chemistry({data}) {
 // MBTI 설명 페이지
 function Profile({data}) {
   const params = useParams();
-  const profile = data[params.username];
+  const profile = data.find(el => el.name === params.username);
+  console.log(profile);
   return (
 	<>	
 		<span className='profile_fix'>

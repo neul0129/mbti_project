@@ -1,37 +1,47 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import './Home.css';
 
-function Style(el) {
+// MBTI 버튼 컴포넌트
+function MbtiButton({data}) {
+  console.log(data);
+  const [isHovering, setIsHovering] = useState(false);
   const linkStyle = {
-    link: {
-      color : el.color
+    isHover: {
+      color : data.color,
+      border: `2.5px solid ${data.color}`
     },
-    item: {
-      border: `2.5px solid ${el.color}`
+    noHover: {
+      backgroundColor: data.color,
+      color: '#fff'
+      
     }
   }
-  return linkStyle;
+
+  return (
+    <li className='main_items'
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
+    >
+      <Link to={"/profiles/" + data.name} style={
+        isHovering 
+          ? linkStyle.noHover
+          : linkStyle.isHover
+      }>
+        {data.name}
+      </Link>
+    </li>
+  );
 }
 
-function Hover(el) {
-  const Style = {
-    backgroundColor: el.color
-  }
-  return Style;
-}
-
+// Home page 컴포넌트
 function Home({data}) {
-  const mbti = Object.keys(data);
   return (
     <div className="main_container">
       <p className='main_header'>Know your MBTI</p>
       <ul className='main_content'>
-        {mbti.map((el, idx) => (
-          <li key={idx} className='main_items' style={Style(data[el]).item} onMouseOver={() => {Hover(data[el])}}>
-            <Link to={"/profiles/" + el} style={Style(data[el]).link}>
-              {el}
-            </Link>
-          </li>
+        {data.map((el, idx) => (
+          <MbtiButton data={el} key={idx} />
         ))}
       </ul>
       <p className='main_footer'>버튼을 누르면 해당 MBTI 소개 페이지로 넘어갑니다.</p>

@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Profile from './pages/profile/Profile';
 
-const data = {
-  ENTP: {
+const data = [
+  {
     name: 'ENTP',
     color: '#A8BD5F',
     nickname: '열성적인 중재자',
@@ -22,7 +22,7 @@ const data = {
     },
 		image : './profile/image/ENTP.png',
   },
-  ENTJ: {
+  {
     name: 'ENTJ',
     color: '#A4D9D0',
     nickname: '열성적인 중재자',
@@ -41,7 +41,7 @@ const data = {
     },
 		image : './profile/image/ENTP.png',
   },
-  INTJ: {
+  {
     name: 'INTJ',
     color: '#DA7B6B',
     nickname: '열성적인 중재자',
@@ -60,7 +60,7 @@ const data = {
     },
 		image : './profile/image/ENTP.png',
   },
-  INFJ: {
+  {
     name: 'INFJ',
     color: '#BCCB85',
     nickname: '열성적인 중재자',
@@ -79,7 +79,7 @@ const data = {
     },
 		image : 'src/pages/profile/image/ENFJ.png',
   },
-};
+];
 
 function App() {
   return (
