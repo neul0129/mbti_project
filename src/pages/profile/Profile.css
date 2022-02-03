@@ -1,6 +1,3 @@
-/* 전체 */
-
-
 .empty{
 	height: 500px;
 }
@@ -90,44 +87,44 @@
 
 /* Mbti 설명에서 오른쪽 */
 .profile_description_content{
-	float: left;
+	display: flex;
+	flex-direction: column;
 	width: 50%;
 	height: 300px;
 	margin: 100px 0px 0px 40px;
-	position: relative;
+}
+
+.profile_description_content_top{
+	display: flex;
+	margin: 0 auto;
+	justify-content: flex-start;
 }
 
 /* Mbti 설명에서 성격유형 */
 .profile_personality_type{
 	border: 1px solid;
 	width: 80px;
-	height: 25px;
 	text-align: center;
-	padding-top: 4px;
-	position: absolute;
-	top: 9px;
+	padding-top: 10px;
+	
 }
 
 /* Mbti 설명에서 mbti부분 */
 .profile_mbti{
-	position: absolute;
-	top: 0px;
-	left: 95px;
+	
 	font-size: 35px;
 	color: var(--subpage-font-color);
 }
 
 /* Mbti 설명에서 별명부분 */
 .profile_nickname{
-	position: absolute;
-	top: 50px;
+	
 	font-size: 2.5em;
 }
 
 /* Mbti 설명에서 성격부분 */
 .profile_personality{
-	position: absolute;
-	top: 120px;
+	
 }
 
 /* 특징 */

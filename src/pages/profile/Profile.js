@@ -51,16 +51,18 @@ function Description({data}) {
 				<img src="src\pages\profile\image\ENFJ.png" alt='' />
 			</div>
 			<div className='profile_description_content'>
-				{/** 성격유형 */}
-				<div className='profile_personality_type'>
-					<span>성격유형</span>
-				</div>
-				
-				{/** MBTI */}
-				<div className='profile_mbti'> 
-					<span>
-						{data.name}
-					</span> 
+				<div className='profile_description_content_top'>
+					{/** 성격유형 */}
+					<div className='profile_personality_type'>
+						<span>성격유형</span>
+					</div>
+					
+					{/** MBTI */}
+					<div className='profile_mbti'> 
+						<span>
+							{data.name}
+						</span> 
+					</div>
 				</div>
 
 				{/** 별명 */}
