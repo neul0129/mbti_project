@@ -3,6 +3,10 @@ html{
 	scroll-behavior: smooth;
 }
 
+* {
+	margin: 0;
+}
+
 :root {
 	background-color: black;
 	color: #fff;
@@ -17,6 +21,8 @@ html{
 .profile_fix{
 	width: 100%;
 	position: fixed;
+	z-index: 999;
+	background-color: black;
 }
 
 /* 헤더부분 뺀 컨텐트부분 */
@@ -150,6 +156,25 @@ html{
 
 .pros{
 	
+}
+
+#prosCons > ul {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#prosCons > ul > li{
+	text-align: left;
+}
+
+.prosTitle {
+	font-size: 2em;
+	color: var(--subpage-font-color);
+}
+
+#chemistry > ul {
+	display: flex;
+	justify-content: space-evenly;
 }
 
 

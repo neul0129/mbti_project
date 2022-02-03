@@ -109,7 +109,7 @@ function ProCons({data}) {
           {prosCons.map((pros, idx) => (
             <li key={idx} className='pros'>
               {/** 장단점 title */}
-              <div>{pros}</div>
+              <div className='prosTitle'>{pros}</div>
               {/** 장단점 리스트 요소 */}
               <div>
                 {data[pros].map((el, idx) => (
