@@ -9,12 +9,12 @@ function MbtiButton({data}) {
   const linkStyle = {
     isHover: {
       color : data.color,
-      border: `2.5px solid ${data.color}`
+      outline: `2.5px solid ${data.color}`
     },
     noHover: {
       backgroundColor: data.color,
-      color: '#fff'
-      
+      color: '#fff',
+      transition: `all ease 0.2s 0s`
     }
   }
 
