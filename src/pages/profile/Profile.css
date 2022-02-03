@@ -19,15 +19,17 @@
 
 /* 헤더 */
 .profile_header{
-	display: flex;
 	height: 100px;
+	position: relative;
 }
 
 /* 아이콘 */
 .profile_goHome{
+	position: absolute;
+	left: 30px;
+	top: 5px;
+	font-size: 30px;
 	height: 25px;
-	margin-top: 30px;
-	margin-left: 40px;
 	background-color: transparent;
 	border: none;
 	color: white;
@@ -39,6 +41,7 @@
 	margin: 0 auto;
 	font-size: 30px;
 	margin-top: 20px;
+	text-align: center;
 }
 
 /* 제목에서 mbti부분 */
@@ -100,7 +103,7 @@
 	width: 100%;
 	justify-content: start;
 	padding-left: 9px;
-	margin-bottom: 10px;
+	align-items: center;
 }
 
 /* Mbti 설명에서 성격유형 */
