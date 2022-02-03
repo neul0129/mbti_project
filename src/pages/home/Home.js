@@ -6,13 +6,19 @@ function Style(el) {
     link: {
       color : el.color
     },
-    el: {
+    item: {
       border: `2.5px solid ${el.color}`
     }
   }
   return linkStyle;
 }
 
+function Hover(el) {
+  const Style = {
+    backgroundColor: el.color
+  }
+  return Style;
+}
 
 function Home({data}) {
   const mbti = Object.keys(data);
@@ -21,7 +27,7 @@ function Home({data}) {
       <p className='main_header'>Know your MBTI</p>
       <ul className='main_content'>
         {mbti.map((el, idx) => (
-          <li key={idx} className='main_items' style={Style(data[el]).el}>
+          <li key={idx} className='main_items' style={Style(data[el]).item} onMouseOver={() => {Hover(data[el])}}>
             <Link to={"/profiles/" + el} style={Style(data[el]).link}>
               {el}
             </Link>

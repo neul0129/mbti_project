@@ -23,15 +23,13 @@
 }
 
 /* 컨텐츠 아이템들 */
-.main_items {
+.main_items > a{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
-}
-
-.main_items > a{
   text-decoration: none;
+  height: 3rem;
+  font-size: 1.5rem;
 }
 
 .main_footer {
