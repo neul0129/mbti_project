@@ -19,7 +19,7 @@ function Header({data}) {
 					<FontAwesomeIcon icon={faChevronLeft} />
 				</button>
 				<div className='profile_title'>
-					<span className='profile_title_mbti'>{data}</span> 
+					<span className='profile_title_mbti' style={{color : data.color}}>{data.name}</span> 
 					<span className='profile_title_description'>: Know your MBTI</span>
 				</div>
 			</div>
@@ -59,7 +59,7 @@ function Description({data}) {
 					
 					{/** MBTI */}
 					<div className='profile_mbti'> 
-						<span>
+						<span style={{color : data.color}}>
 							{data.name}
 						</span> 
 					</div>
@@ -89,9 +89,9 @@ function Character({data}) {
   return (
     <>
 		<div id='character'>
-      <div className='profile_content_title'>특징</div>
+      <div className='profile_content_title' style={{color : data.color}}>특징</div>
       <div className='character_content'>
-            {data}
+            {data.character}
 			</div>
     </div>	 
     </>
@@ -99,19 +99,19 @@ function Character({data}) {
 }
 
 // MBTI 장단점 컴포넌트
-function ProCons({data}) {
+function ProCons({data, color}) {
   // 배열 : 1. 장점, 2. 단점
   const prosCons = Object.keys(data);
 
   return (
     <>
       <div id='prosCons'>
-        <div className='profile_content_title'>장단점</div>
+        <div className='profile_content_title' style={{color}}>장단점</div>
         <ul>
           {prosCons.map((pros, idx) => (
             <li key={idx} className='pros'>
               {/** 장단점 title */}
-              <div className='prosTitle'>{pros}</div>
+              <div className='prosTitle'style={{color}}>{pros}</div>
               {/** 장단점 리스트 요소 */}
               <div>
                 {data[pros].map((el, idx) => (
@@ -133,9 +133,9 @@ function Fact({data}) {
   return (
     <>
       <div id='fact'>
-        <div className='profile_content_title'>팩폭</div>
+        <div className='profile_content_title' style={{color : data.color}}>팩폭</div>
         <ul>
-          {data.map((el, idx) => (
+          {data.fact.map((el, idx) => (
             <li key={idx}>
               {el}
             </li>
@@ -151,9 +151,9 @@ function Job({data}) {
   return (
     <>
       <div id='job'>
-        <div className='profile_content_title'>직업</div>
+        <div className='profile_content_title' style={{color : data.color}}>직업</div>
         <ul>
-          {data.map((el, idx) => 
+          {data.job.map((el, idx) => 
             <li key={idx}>
               {el}
             </li>
@@ -169,9 +169,9 @@ function Love({data}) {
   return (
     <>
       <div id='love'>
-        <div className='profile_content_title'>연애스타일</div>
+        <div className='profile_content_title' style={{color : data.color}}>연애스타일</div>
         <ul>
-          {data.map((el, idx) => 
+          {data.love.map((el, idx) => 
             <li key={idx}>
               {el}
             </li>
@@ -183,19 +183,19 @@ function Love({data}) {
 }
 
 // MBTI 궁합 컴포넌트
-function Chemistry({data}) {
+function Chemistry({data, color}) {
   // 배열 : 1. 잘 맞는 MBTI, 2. 안 맞는 MBTI
   const chemistry = Object.keys(data);
 
   return (
     <>
       <div id='chemistry'>
-        <div className='profile_content_title'>궁합</div>
+        <div className='profile_content_title' style={{color}}>궁합</div>
         <ul>
           {chemistry.map((chemistry, idx) => (
             <li key={idx}>
               {/** 궁합 title */}
-              <div>{chemistry}</div>
+              <div style={{color}}>{chemistry}</div>
               {/** 궁합 리스트 요소 */}
               <div>
                 {data[chemistry].map((el, idx) => (
@@ -220,18 +220,18 @@ function Profile({data}) {
   return (
 	<>	
 		<span className='profile_fix'>
-			<Header data={profile.name} />
+			<Header data={profile} />
 			<Navbar />
 		</span>	
 		<div className='profile'>
 			<div className='profile_content'>
 				<Description data={profile} />
-				<Character data={profile.character} />
-				<ProCons data={profile.prosCons} />
-				<Fact data={profile.fact} />
-				<Job data={profile.job} />
-				<Love data={profile.love} />
-				<Chemistry data={profile.chemistry} />
+				<Character data={profile} />
+				<ProCons data={profile.prosCons} color={profile.color} />
+				<Fact data={profile} />
+				<Job data={profile} />
+				<Love data={profile} />
+				<Chemistry data={profile.chemistry} color={profile.color} />
 			</div>
     </div>
 	</>
