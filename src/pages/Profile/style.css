@@ -84,6 +84,10 @@
 	height: 400px;
 }
 
+.profile_image_box > img {
+	padding-top: 80px;
+}
+
 /* Mbti 설명에서 오른쪽 */
 .profile_description_content{
 	display: flex;
