@@ -17,3 +17,11 @@ body{
 	--subpage-font-color: #D9E250;
 	--subpage-left-margin: 100px;
 }
+
+ul{
+	list-style: none;
+	padding-left: 20px;
+}
+li{
+	margin: 10px 0px;
+}
