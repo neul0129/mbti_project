@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai'
 import './style.css';
+import { useState } from 'react';
 
 // Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
@@ -10,6 +11,19 @@ function Header({data}) {
   function backHome() {
     navigate('/');
   }
+
+	const [isDisabled, setIsDisabled] = useState(true);
+	window.onmousewheel = function(e){
+		if(e.wheelDelta < 0){
+			window.scrollBy(0, 1000)
+			setIsDisabled(false);
+			setTimeout(() => setIsDisabled(true),1000)
+		}else{
+			window.scrollBy(0, -1000)
+			setIsDisabled(false);
+			setTimeout(() => setIsDisabled(true),1000)
+		}
+	}
 
   return (
     <>
