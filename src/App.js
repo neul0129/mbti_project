@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/index";
-import Profile from "./pages/Profile/index";
+import Profile from "./pages/profile/index";
 import "./App.css";
 
 const data = [
