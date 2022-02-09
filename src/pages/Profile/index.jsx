@@ -48,7 +48,7 @@ function Description({data}) {
     <>
 		<div className='profile_description' id='description'>
 			<div className='profile_image_box'>
-				<img src="/image/ENTJ.png" alt='' />
+				<img src={"/image/" + data.name + ".png"} alt='' />
 			</div>
 			<div className='profile_description_content'>
 				<div className='profile_description_content_top'>

@@ -65,7 +65,6 @@ const data = [
       "잘 맞는  MBTI": ["ESFP", "ESTP"],
       "안 맞는  MBTI": ["INFP", "ENFP", "INFJ", "ENFJ"],
     },
-    image: "./image/ENTP.png",
   },
   // 2. ISFJ
   {
@@ -130,7 +129,6 @@ const data = [
       "잘 맞는  MBTI": ["ESFP", "ESTP", "ISFJ", "ESFJ", "ISTJ", "ESTJ"],
       "안 맞는  MBTI": ["INFP", "ENFP", "INFJ", "ENFJ"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 3. INTJ
   {
@@ -153,7 +151,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 4. INFJ
   {
@@ -176,7 +173,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "src/pages/profile/image/ENFJ.png",
   },
   // 5. ISTP
   {
@@ -199,7 +195,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 6. ISFP
   {
@@ -222,7 +217,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 7. INFP
   {
@@ -245,7 +239,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 8. INTP
   {
@@ -268,7 +261,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 9. ESTP
   {
@@ -324,7 +316,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFJ", "TSTP", "INFP"],
       "안 맞는  MBTI": ["INFP", "ENFP", "INFJ", "ENFJ"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 10. ESFP
   {
@@ -382,7 +373,6 @@ const data = [
       "잘 맞는  MBTI": ["ISFJ", "ISTJ"],
       "안 맞는  MBTI": ["INFP", "ENFP", "INFJ", "ENFJ"],
     },
-    image: "/image/ESFJ.png",
   },
   // 11. ENFP
   {
@@ -437,7 +427,6 @@ const data = [
         "ESTJ",
       ],
     },
-    image: "./profile/image/ENFP.png",
   },
   // 12. ENTP
   {
@@ -460,7 +449,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 13. ESTJ
   {
@@ -483,7 +471,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 14. ESFJ
   {
@@ -506,7 +493,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 15. ENFJ
   {
@@ -529,7 +515,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "./profile/image/ENTP.png",
   },
   // 16. ENTJ
   {
@@ -552,7 +537,6 @@ const data = [
       "잘 맞는  MBTI": ["ENFP", "ESFJ", "ISFP"],
       "안 맞는  MBTI": ["ISFP", "INTP", "INFP"],
     },
-    image: "/image/ENTJ.png",
   },
 ];
 
