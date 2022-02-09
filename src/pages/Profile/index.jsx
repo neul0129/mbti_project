@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import './Profile.css';
+import './style.css';
 
 // Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
@@ -48,7 +48,7 @@ function Description({data}) {
     <>
 		<div className='profile_description' id='description'>
 			<div className='profile_image_box'>
-				<img src="src\pages\profile\image\ENFJ.png" alt='' />
+				<img src="/image/ENTJ.png" alt='' />
 			</div>
 			<div className='profile_description_content'>
 				<div className='profile_description_content_top'>
@@ -56,7 +56,6 @@ function Description({data}) {
 					<div className='profile_personality_type'>
 						<span>성격유형</span>
 					</div>
-					
 					{/** MBTI */}
 					<div className='profile_mbti'> 
 						<span style={{color : data.color}}>

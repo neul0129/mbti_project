@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import './Home.css';
+import './style.css';
 
 // MBTI 버튼 컴포넌트
 function MbtiButton({data}) {
-  console.log(data);
   const [isHovering, setIsHovering] = useState(false);
   const linkStyle = {
     isHover: {
