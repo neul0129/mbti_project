@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { AiFillHome } from 'react-icons/ai'
 import './style.css';
 
 // Mbti 페이지 헤더 컴포넌트
@@ -16,7 +15,7 @@ function Header({data}) {
     <>
 			<div className='profile_header'>
 				<button onClick={backHome} className='profile_goHome'>
-					<FontAwesomeIcon icon={faChevronLeft} />
+          <AiFillHome />
 				</button>
 				<div className='profile_title'>
 					<span className='profile_title_mbti' style={{color : data.color}}>{data.name}</span> 
@@ -26,6 +25,7 @@ function Header({data}) {
     </>
   );
 }
+
 function Navbar(){
 	return(
 	<div className='profile_navBar'>
@@ -44,6 +44,7 @@ function Navbar(){
 // Mbti 설명 컴포넌트
 // MBTI 캐릭터 이미지 넣어야해요
 function Description({data}) {
+  console.log(data.name);
   return (
     <>
 		<div className='profile_description' id='description'>
@@ -63,7 +64,6 @@ function Description({data}) {
 						</span> 
 					</div>
 				</div>
-
 				{/** 별명 */}
 				<div className='profile_nickname'>
 					<span>
