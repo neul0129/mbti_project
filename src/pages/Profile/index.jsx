@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai'
 import './style.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
@@ -11,19 +11,33 @@ function Header({data}) {
   function backHome() {
     navigate('/');
   }
+	
+	// window.onmousewheel = function(e){
+	// 	if(e.wheelDelta < 0){
+	// 		e.preventDefault();
+	// 		window.scrollBy(0, 1000)
+	// 	}else{
+	// 		window.scrollBy(0, -1000)
+	// 	}
+	// }
 
-	const [isDisabled, setIsDisabled] = useState(true);
-	window.onmousewheel = function(e){
-		if(e.wheelDelta < 0){
-			window.scrollBy(0, 1000)
-			setIsDisabled(false);
-			setTimeout(() => setIsDisabled(true),1000)
-		}else{
-			window.scrollBy(0, -1000)
-			setIsDisabled(false);
-			setTimeout(() => setIsDisabled(true),1000)
+	window.addEventListener("wheel", function(e){
+		let wheelDelta;
+		if(e.wheelDelta < 0) 
+		{	
+			window.scrollBy(0, 1000); 
+			wheelDelta = 0;
+			e.preventDefault();
+			e.stopPropagation();
 		}
-	}
+		else 
+		{
+			window.scrollBy(0, -1000);
+			wheelDelta = 0;
+			e.preventDefault();
+			e.stopPropagation();
+		 }
+	},{passive : false});
 
   return (
     <>
