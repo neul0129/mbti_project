@@ -15,6 +15,10 @@ const HeaderWrapper = styled.div`
     .profile_toggle {
       display: block;
       flex-direction: column;
+      color: white;
+      background: transparent;
+      border-style: none;
+      font-size: 30px;
     }
     .header_menuList {
       list-style: none;
