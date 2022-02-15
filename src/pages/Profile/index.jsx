@@ -1,29 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { FiChevronDown } from 'react-icons/fi'
 import './style.css';
 import { useState } from 'react';
-import styled from "styled-components";
-
-const HeaderWrapper = styled.div`
-  .profile_toggle {
-    display:none;
-  }
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-    .profile_toggle {
-      display: block;
-      flex-direction: column;
-    }
-    .header_menuList {
-      list-style: none;
-      display: ${(props) => (props.isToggled ? "flex" : "none")};
-    }
-  }
-`;
-
 
 // Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
@@ -33,7 +12,7 @@ function Header({data}) {
     navigate('/');
   }
 
-  const [isDisabled, setIsDisabled] = useState(true);
+	const [isDisabled, setIsDisabled] = useState(true);
 	window.onmousewheel = function(e){
 		if(e.wheelDelta < 0){
 			window.scrollBy(0, 1000)
@@ -46,37 +25,17 @@ function Header({data}) {
 		}
 	}
 
-  const [isToggled, setIsToggled] = useState(false);
-
   return (
     <>
-      <HeaderWrapper>
-        <div className='profile_header' isToggled={isToggled}>
-          <button onClick={backHome} className='profile_goHome'>
-            <AiFillHome />
-          </button>
-          <div className='profile_title'>
-            <span className='profile_title_mbti' style={{color : data.color}}>{data.name}</span> 
-            <span className='profile_title_description'>: Know your MBTI</span>
-          </div>
-          <button 
-            className="profile_toggle" 
-            onClick={() => {
-              setIsToggled(!isToggled);
-            }}>
-            {!isToggled ? <GiHamburgerMenu /> : <FiChevronDown />}
-          </button>
-          <ul className="header_menuList">
-            <a href='#description'> 성격유형</a>
-            <a href='#character'> 특징</a>
-            <a href='#prosCons'> 장단점</a>
-            <a href='#fact'> 팩폭</a>
-            <a href='#job'> 직업</a>
-            <a href='#love'> 연애</a>
-            <a href='#chemistry'> 궁합</a>
-          </ul>
-        </div>
-      </HeaderWrapper>
+			<div className='profile_header'>
+				<button onClick={backHome} className='profile_goHome'>
+          <AiFillHome />
+				</button>
+				<div className='profile_title'>
+					<span className='profile_title_mbti' style={{color : data.color}}>{data.name}</span> 
+					<span className='profile_title_description'>: Know your MBTI</span>
+				</div>
+			</div>
     </>
   );
 }
@@ -92,7 +51,7 @@ function Navbar(){
 			<a href='#love'> 연애</a>
 			<a href='#chemistry'> 궁합</a>
 	</div>
-  );
+			);
 }
 
 
@@ -272,10 +231,10 @@ function Profile({data}) {
   const profile = data.find(el => el.name === params.username);
   console.log(profile);
   return (
-	<>
+	<>	
 		<span className='profile_fix'>
-      <Header data={profile} />
-      <Navbar />
+			<Header data={profile} />
+			<Navbar />
 		</span>	
 		<div className='profile'>
 			<div className='profile_content'>
