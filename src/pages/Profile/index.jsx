@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
   .profile_toggle {
     display:none;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1002px) {
     flex-wrap: wrap;
     .profile_toggle {
       display: block;
@@ -19,6 +19,7 @@ const HeaderWrapper = styled.div`
       background: transparent;
       border-style: none;
       font-size: 30px;
+			margin-top: 10px;
     }
     .header_menuList {
       list-style: none;
@@ -37,7 +38,7 @@ const HeaderWrapper = styled.div`
       border-bottom: 3px solid var(--subpage-font-color);
     }
 	}
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1002px) {
     .header_menuList{
       display: none;
     }
@@ -49,18 +50,18 @@ function Header({data}) {
   function backHome() {
     navigate('/');
   }
-	const [isDisabled, setIsDisabled] = useState(true);
-	window.onmousewheel = function(e){
-		if(e.wheelDelta < 0){
-			window.scrollBy(0, 1000)
-			setIsDisabled(false);
-			setTimeout(() => setIsDisabled(true),1000)
-		}else{
-			window.scrollBy(0, -1000)
-			setIsDisabled(false);
-			setTimeout(() => setIsDisabled(true),1000)
-		}
-	}
+	// const [isDisabled, setIsDisabled] = useState(true);
+	// window.onmousewheel = function(e){
+	// 	if(e.wheelDelta < 0){
+	// 		window.scrollBy(0, 1000)
+	// 		setIsDisabled(false);
+	// 		setTimeout(() => setIsDisabled(true),1000)
+	// 	}else{
+	// 		window.scrollBy(0, -1000)
+	// 		setIsDisabled(false);
+	// 		setTimeout(() => setIsDisabled(true),1000)
+	// 	}
+	// }
   const [isToggled, setIsToggled] = useState(false);
   return (
     <>

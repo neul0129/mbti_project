@@ -24,6 +24,7 @@
   border: none;
   color: white;
   cursor: pointer;
+	margin-bottom: 10px;
 }
 /* 제목 */
 .profile_title {
@@ -155,7 +156,7 @@
 #love,
 #chemistry {
   text-align: center;
-  min-height: 800px;
+  height: 100vh;
   padding-top: 200px;
 }
 .profile_content_title {
@@ -170,8 +171,17 @@ ul {
 li {
   margin: 10px 0px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1002px) {
   .profile_navBar {
     display: none;
   }
+	#prosCons > ul {
+		flex-direction: column;
+	}
+	#prosCons > ul > li {
+		text-align: center;
+	}
+	#chemistry > ul {
+		flex-direction: column;
+	}
 }
