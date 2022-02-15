@@ -1,205 +1,177 @@
-
-.profile_fix{
-	width: 100%;
-	position: fixed;
-	z-index: 999;
-	background-color: black;
+.profile_fix {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: black;
 }
-
 /* 헤더부분 뺀 컨텐트부분 */
-.profile_content{
-	margin: 0 auto;
-	width: 80%;
+.profile_content {
+  margin: 0 auto;
+  width: 80%;
 }
-
-
 /* 헤더 */
-.profile_header{
-	height: 100px;
-	position: relative;
+.profile_header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
 }
-
 /* 아이콘 */
-.profile_goHome{
-	position: absolute;
-	left: 30px;
-	top: 5px;
-	font-size: 30px;
-	height: 25px;
-	background-color: transparent;
-	border: none;
-	color: white;
-	cursor: pointer;
+.profile_goHome {
+  font-size: 30px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
-
 /* 제목 */
-.profile_title{
-	margin: 0 auto;
-	font-size: 30px;
-	margin-top: 20px;
-	text-align: center;
+.profile_title {
+  margin: 0 auto;
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
-
 /* 제목에서 mbti부분 */
-.profile_title_mbti{
-	color: var(--subpage-font-color);
+.profile_title_mbti {
+  color: var(--subpage-font-color);
 }
-
 /* 제목에서 Know yout MBTI 부분 */
-.profile_title_description{
-
+.profile_title_description {
 }
-
 /* 네브바 */
-.profile_navBar{
-	font-size: 25px;
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	height: 60px;
+.profile_navBar {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
 }
-
 /* 네브바 아이템들 */
 .profile_navBar > a {
-	text-decoration: none;
-	margin: 0px 40px;
-	color: #fff;
-	height: 45px;
+  text-decoration: none;
+  margin: 0px 40px;
+  color: #fff;
+  height: 45px;
 }
-
-.profile_navBar > a:hover{
-	border-bottom: 3px solid var(--subpage-font-color);
+.profile_navBar > a:hover {
+  border-bottom: 3px solid var(--subpage-font-color);
 }
-
 /* Mbti 설명 */
-.profile_description{
-	display: flex;
-	padding-top: 200px;
+.profile_description {
+  display: flex;
+  padding-top: 200px;
 }
-
 /* Mbti 설명에서 이미지 큰 틀 */
-.profile_image_box{
-	float: left;
-	width: 50%;
-	height: 400px;
+.profile_image_box {
+  float: left;
+  width: 50%;
+  height: 400px;
 }
-
 .profile_image_box > img {
-	padding-top: 80px;
+  padding-top: 80px;
 }
-
 /* Mbti 설명에서 오른쪽 */
-.profile_description_content{
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-	height: 300px;
-	margin: 100px 0px 0px 40px;
+.profile_description_content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 300px;
+  margin: 100px 0px 0px 40px;
 }
-
-.profile_description_content_top{
-	display: flex;
-	margin: 0 auto;
-	width: 100%;
-	justify-content: start;
-	padding-left: 9px;
-	align-items: center;
+.profile_description_content_top {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: start;
+  padding-left: 9px;
+  align-items: center;
 }
-
 /* Mbti 설명에서 성격유형 */
-.profile_personality_type{
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: 1px solid;
-    width: 80px;
-    text-align: center;
-		height: 35px;
+.profile_personality_type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid;
+  width: 80px;
+  text-align: center;
+  height: 35px;
 }
-
 /* Mbti 설명에서 mbti부분 */
-.profile_mbti{
-	padding-left: 15px;
-	font-size: 35px;
-	color: var(--subpage-font-color);
-	margin: 10px 0px;
+.profile_mbti {
+  padding-left: 15px;
+  font-size: 35px;
+  color: var(--subpage-font-color);
+  margin: 10px 0px;
 }
-
 /* Mbti 설명에서 별명부분 */
-.profile_nickname{
-	text-align: left;
-	font-size: 2.5em;
+.profile_nickname {
+  text-align: left;
+  font-size: 2.5em;
 }
-
 /* Mbti 설명에서 성격부분 */
-.profile_personality{
-	text-align: left;
-	padding-left: 7px;
-	margin: 10px 0px;
+.profile_personality {
+  text-align: left;
+  padding-left: 7px;
+  margin: 10px 0px;
 }
-
 /* 특징 */
 /* 특징 내용 */
-.character_content{
-	font-size: 16px;
+.character_content {
+  font-size: 16px;
 }
-
-.prosContent{
-	text-align: center;
+.prosContent {
+  text-align: center;
 }
-
-.pros{
-	
+.pros {
 }
-
 #prosCons > ul {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
-
-#prosCons > ul > li{
-	text-align: left;
+#prosCons > ul > li {
+  text-align: left;
 }
-
 .prosTitle {
-	font-size: 2em;
-	color: var(--subpage-font-color);
+  font-size: 2em;
+  color: var(--subpage-font-color);
 }
-
 #chemistry > ul {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
-
-
-.propsCons-el{
-	margin: 10px 0px;
+.propsCons-el {
+  margin: 10px 0px;
 }
-
-#description{
-	text-align: center;
-	min-height: 800px;	
+#description {
+  text-align: center;
+  min-height: 800px;
 }
-
-#character, #prosCons, #fact, #job, #love, #chemistry{
-	text-align: center;
-	min-height: 800px;	
-	padding-top: 200px;
+#character,
+#prosCons,
+#fact,
+#job,
+#love,
+#chemistry {
+  text-align: center;
+  min-height: 800px;
+  padding-top: 200px;
 }
-
-.profile_content_title{
-	font-size: 50px;
-	color: var(--subpage-font-color);
-	margin-bottom: 40px;
+.profile_content_title {
+  font-size: 50px;
+  color: var(--subpage-font-color);
+  margin-bottom: 40px;
 }
-
-ul{
-	list-style: none;
-	padding-left: 20px;
+ul {
+  list-style: none;
+  padding-left: 20px;
 }
-li{
-	margin: 10px 0px;
+li {
+  margin: 10px 0px;
 }
-
-
-
+@media screen and (max-width: 768px) {
+  .profile_navBar {
+    display: none;
+  }
+}

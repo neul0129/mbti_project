@@ -1,17 +1,50 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { FiChevronDown } from 'react-icons/fi'
 import './style.css';
 import { useState } from 'react';
-
+import styled from "styled-components";
+const HeaderWrapper = styled.div`
+  .profile_toggle {
+    display:none;
+  }
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    .profile_toggle {
+      display: block;
+      flex-direction: column;
+    }
+    .header_menuList {
+      list-style: none;
+      display: ${(props) => (props.isToggled ? "flex" : "none")};
+			flex-direction: column;
+			text-align: center;
+      height: 100vh;
+    }
+    .header_menuList > a {
+      text-decoration: none;
+      margin: 0px 40px;
+      color: #fff;
+      line-height: 10vh;
+    }
+    .header_menuList > a:hover {
+      border-bottom: 3px solid var(--subpage-font-color);
+    }
+	}
+  @media screen and (min-width: 769px) {
+    .header_menuList{
+      display: none;
+    }
+  }
+`;
 // Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
   let navigate = useNavigate();
-
   function backHome() {
     navigate('/');
   }
-
 	const [isDisabled, setIsDisabled] = useState(true);
 	window.onmousewheel = function(e){
 		if(e.wheelDelta < 0){
@@ -24,22 +57,41 @@ function Header({data}) {
 			setTimeout(() => setIsDisabled(true),1000)
 		}
 	}
-
+  const [isToggled, setIsToggled] = useState(false);
   return (
     <>
-			<div className='profile_header'>
-				<button onClick={backHome} className='profile_goHome'>
-          <AiFillHome />
-				</button>
-				<div className='profile_title'>
-					<span className='profile_title_mbti' style={{color : data.color}}>{data.name}</span> 
-					<span className='profile_title_description'>: Know your MBTI</span>
-				</div>
-			</div>
+      <HeaderWrapper isToggled={isToggled}>
+        <div className='profile_header' >
+          <button onClick={backHome} className='profile_goHome'>
+            <AiFillHome />
+          </button>
+          <div className='profile_title'>
+            <span className='profile_title_mbti' style={{color : data.color}}>{data.name}</span> 
+            <span className='profile_title_description'>: Know your MBTI</span>
+          </div>
+					<div>
+          <button 
+            className="profile_toggle" 
+            onClick={() => {
+              setIsToggled(!isToggled);
+            }}>
+            {!isToggled ? <GiHamburgerMenu /> : <FiChevronDown />}
+          </button>
+					</div>
+        </div>
+          <ul className="header_menuList">
+            <a href='#description'> 성격유형</a>
+            <a href='#character'> 특징</a>
+            <a href='#prosCons'> 장단점</a>
+            <a href='#fact'> 팩폭</a>
+            <a href='#job'> 직업</a>
+            <a href='#love'> 연애</a>
+            <a href='#chemistry'> 궁합</a>
+          </ul>
+      </HeaderWrapper>
     </>
-  );
+  )
 }
-
 function Navbar(){
 	return(
 	<div className='profile_navBar'>
@@ -53,8 +105,6 @@ function Navbar(){
 	</div>
 			);
 }
-
-
 // Mbti 설명 컴포넌트
 // MBTI 캐릭터 이미지 넣어야해요
 function Description({data}) {
@@ -84,7 +134,6 @@ function Description({data}) {
 						{data.nickname}
 					</span>
 				</div>
-
 				{/** MBTI 성격 */}
 				<div className='profile_personality'>
 					<span>
@@ -96,7 +145,6 @@ function Description({data}) {
     </>
   )
 }
-
 // MBTI 특징 컴포넌트
 function Character({data}) {
   return (
@@ -110,12 +158,10 @@ function Character({data}) {
     </>
   )
 }
-
 // MBTI 장단점 컴포넌트
 function ProCons({data, color}) {
   // 배열 : 1. 장점, 2. 단점
   const prosCons = Object.keys(data);
-
   return (
     <>
       <div id='prosCons'>
@@ -140,7 +186,6 @@ function ProCons({data, color}) {
     </>
   )
 }
-
 // MBTI 팩폭 컴포넌트
 function Fact({data}) {
   return (
@@ -158,7 +203,6 @@ function Fact({data}) {
     </>
   )
 }
-
 // MBTI 직업 컴포넌트
 function Job({data}) {
   return (
@@ -176,7 +220,6 @@ function Job({data}) {
     </>
   )
 }
-
 // MBTI 연애스타일 컴포넌트
 function Love({data}) {
   return (
@@ -194,12 +237,10 @@ function Love({data}) {
     </>
   )
 }
-
 // MBTI 궁합 컴포넌트
 function Chemistry({data, color}) {
   // 배열 : 1. 잘 맞는 MBTI, 2. 안 맞는 MBTI
   const chemistry = Object.keys(data);
-
   return (
     <>
       <div id='chemistry'>
@@ -224,7 +265,6 @@ function Chemistry({data, color}) {
     </>
   )
 }
-
 // MBTI 설명 페이지
 function Profile({data}) {
   const params = useParams();
@@ -250,5 +290,4 @@ function Profile({data}) {
 	</>
   )
 };
-
 export default Profile;
