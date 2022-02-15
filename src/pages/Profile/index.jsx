@@ -24,22 +24,29 @@ const HeaderWrapper = styled.div`
   }
 `;
 
+
+// Mbti 페이지 헤더 컴포넌트
 function Header({data}) {
-      navigate('/');
-    }
-  
-    const [isDisabled, setIsDisabled] = useState(true);
-    window.onmousewheel = function(e){
-      if(e.wheelDelta < 0){
-        window.scrollBy(0, 1000)
-        setIsDisabled(false);
-        setTimeout(() => setIsDisabled(true),1000)
-      }else{
-        window.scrollBy(0, -1000)
-        setIsDisabled(false);
-        setTimeout(() => setIsDisabled(true),1000)
-      }
-    }
+  let navigate = useNavigate();
+
+  function backHome() {
+    navigate('/');
+  }
+
+  const [isDisabled, setIsDisabled] = useState(true);
+	window.onmousewheel = function(e){
+		if(e.wheelDelta < 0){
+			window.scrollBy(0, 1000)
+			setIsDisabled(false);
+			setTimeout(() => setIsDisabled(true),1000)
+		}else{
+			window.scrollBy(0, -1000)
+			setIsDisabled(false);
+			setTimeout(() => setIsDisabled(true),1000)
+		}
+	}
+
+  const [isToggled, setIsToggled] = useState(false);
 
   return (
     <>
@@ -72,7 +79,7 @@ function Header({data}) {
       </HeaderWrapper>
     </>
   );
-
+}
 
 function Navbar(){
 	return(
