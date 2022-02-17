@@ -9,6 +9,7 @@ import styled from "styled-components";
 const HeaderWrapper = styled.div`
   .profile_toggle {
     display:none;
+		cursor: pointer;
   }
   @media screen and (max-width: 1002px) {
     flex-wrap: wrap;
