@@ -107,8 +107,9 @@ function Description({data}) {
   return (
     <>
 		<div className='profile_description' id='description'>
+      {/** 이미지 */}
 			<div className='profile_image_box'>
-				<img src={`process.env.PUBLIC_URL${data.name}.png`} alt='' />
+				<img src={"/image/" + data.name + ".png"} alt='mbti 사진' />
 			</div>
 			<div className='profile_description_content'>
 				<div className='profile_description_content_top'>
@@ -264,7 +265,6 @@ function Chemistry({data, color}) {
 function Profile({data}) {
   const params = useParams();
   const profile = data.find(el => el.name === params.username);
-  console.log(profile);
   return (
 	<>	
 		<span className='profile_fix'>
