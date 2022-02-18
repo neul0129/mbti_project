@@ -76,16 +76,18 @@ function Header({data}) {
             <span className='profile_title_description'>: Know your MBTI</span>
           </div>
 					<div>
-          <button 
-            className="profile_toggle" 
-            onClick={() => {
-              setIsToggled(!isToggled);
-            }}>
-            {!isToggled ? <GiHamburgerMenu /> : <FiChevronDown />}
-          </button>
+            <button 
+              className="profile_toggle" 
+              onClick={() => {
+                setIsToggled(!isToggled);
+              }}>
+              {!isToggled ? <GiHamburgerMenu /> : <FiChevronDown />}
+            </button>
 					</div>
         </div>
-          <ul className="header_menuList">
+          <ul className="header_menuList" onClick={() => {
+            setIsToggled(!isToggled);
+          }}>
             <a href='#description'> 성격유형</a>
             <a href='#character'> 특징</a>
             <a href='#prosCons'> 장단점</a>
@@ -119,7 +121,7 @@ function Description({data}) {
     <>
 		<div className='profile_description' id='description'>
 			<div className='profile_image_box'>
-				<img src={"/image/" + data.name + ".png"} alt='' />
+				<img src={"public/image/" + data.name + ".png"} alt='' />
 			</div>
 			<div className='profile_description_content'>
 				<div className='profile_description_content_top'>
