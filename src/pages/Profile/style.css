@@ -67,10 +67,10 @@
 /* Mbti 설명에서 이미지 큰 틀 */
 .profile_image_box {
   float: left;
-}
-.profile_image_box > img {
   width: 50%;
   height: 400px;
+}
+.profile_image_box > img {
   padding-top: 80px;
 }
 /* Mbti 설명에서 오른쪽 */
