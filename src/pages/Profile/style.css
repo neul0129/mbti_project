@@ -24,7 +24,7 @@
   border: none;
   color: white;
   cursor: pointer;
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 /* 제목 */
 .profile_title {
@@ -175,13 +175,16 @@ li {
   .profile_navBar {
     display: none;
   }
-	#prosCons > ul {
-		flex-direction: column;
-	}
-	#prosCons > ul > li {
-		text-align: center;
-	}
-	#chemistry > ul {
-		flex-direction: column;
-	}
+  #prosCons > ul {
+    flex-direction: column;
+  }
+  #prosCons > ul > li {
+    text-align: center;
+  }
+  #chemistry > ul {
+    flex-direction: column;
+  }
+  li {
+    font-size: 10px;
+  }
 }

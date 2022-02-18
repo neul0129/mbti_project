@@ -8,7 +8,7 @@ function MbtiButton({data}) {
   const linkStyle = {
     isHover: {
       color : data.color,
-      outline: `2.5px solid ${data.color}`
+      outline: `2.5px solid ${data.color}`,
     },
     noHover: {
       backgroundColor: data.color,

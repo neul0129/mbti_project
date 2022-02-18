@@ -51,18 +51,6 @@ function Header({data}) {
   function backHome() {
     navigate('/');
   }
-	// const [isDisabled, setIsDisabled] = useState(true);
-	// window.onmousewheel = function(e){
-	// 	if(e.wheelDelta < 0){
-	// 		window.scrollBy(0, 1000)
-	// 		setIsDisabled(false);
-	// 		setTimeout(() => setIsDisabled(true),1000)
-	// 	}else{
-	// 		window.scrollBy(0, -1000)
-	// 		setIsDisabled(false);
-	// 		setTimeout(() => setIsDisabled(true),1000)
-	// 	}
-	// }
   const [isToggled, setIsToggled] = useState(false);
   return (
     <>
@@ -116,12 +104,11 @@ function Navbar(){
 // Mbti 설명 컴포넌트
 // MBTI 캐릭터 이미지 넣어야해요
 function Description({data}) {
-  console.log(data.name);
   return (
     <>
 		<div className='profile_description' id='description'>
 			<div className='profile_image_box'>
-				<img src={"public/image/" + data.name + ".png"} alt='' />
+				<img src={`process.env.PUBLIC_URL${data.name}.png`} alt='' />
 			</div>
 			<div className='profile_description_content'>
 				<div className='profile_description_content_top'>
