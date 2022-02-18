@@ -184,12 +184,6 @@ li {
   #chemistry > ul {
     flex-direction: column;
   }
-	.prosTitle{
-		font-size: 15px;
-	}
-	.chemistryTitle{
-		font-size: 15px;
-	}
   li {
     font-size: 5px;
   }

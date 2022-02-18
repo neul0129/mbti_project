@@ -244,7 +244,7 @@ function Chemistry({data, color}) {
           {chemistry.map((chemistry, idx) => (
             <li key={idx}>
               {/** 궁합 title */}
-              <div style={{color}} className='chemistryTitle'>{chemistry}</div>
+              <div style={{color}}>{chemistry}</div>
               {/** 궁합 리스트 요소 */}
               <div>
                 {data[chemistry].map((el, idx) => (
