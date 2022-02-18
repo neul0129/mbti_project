@@ -184,4 +184,16 @@ li {
 	#chemistry > ul {
 		flex-direction: column;
 	}
+	li{
+		font-size: 5px;
+	}
+	#character,
+#prosCons,
+#fact,
+#job,
+#love,
+#chemistry {
+  height: 100vh;
+  padding-top: 100px;
+}
 }
