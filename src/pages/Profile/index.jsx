@@ -89,7 +89,7 @@ function Header({data}) {
   )
 }
 function Navbar(){
-	return(
+	return (
 	<div className='profile_navBar'>
 			<a href='#description'> 성격유형</a>
 			<a href='#character'> 특징</a>
@@ -99,7 +99,7 @@ function Navbar(){
 			<a href='#love'> 연애</a>
 			<a href='#chemistry'> 궁합</a>
 	</div>
-			);
+  );
 }
 // Mbti 설명 컴포넌트
 // MBTI 캐릭터 이미지 넣어야해요
@@ -281,7 +281,7 @@ function Profile({data}) {
 				<Love data={profile} />
 				<Chemistry data={profile.chemistry} color={profile.color} />
 			</div>
-    </div>
+    		</div>
 	</>
   )
 };
