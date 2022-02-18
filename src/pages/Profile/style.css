@@ -185,6 +185,15 @@ li {
     flex-direction: column;
   }
   li {
-    font-size: 10px;
+    font-size: 5px;
+  }
+  #character,
+  #prosCons,
+  #fact,
+  #job,
+  #love,
+  #chemistry {
+    height: 100vh;
+    padding-top: 100px;
   }
 }
