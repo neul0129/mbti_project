@@ -187,7 +187,8 @@ li {
 	li{
 		font-size: 5px;
 	}
-	#character,
+#description,
+#character,
 #prosCons,
 #fact,
 #job,
