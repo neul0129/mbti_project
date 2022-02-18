@@ -83,7 +83,7 @@ function Header({data}) {
             <a href='#job'> 직업</a>
             <a href='#love'> 연애</a>
             <a href='#chemistry'> 궁합</a>
-          </ul>
+        </ul>
       </HeaderWrapper>
     </>
   )
@@ -109,7 +109,7 @@ function Description({data}) {
 		<div className='profile_description' id='description'>
       {/** 이미지 */}
 			<div className='profile_image_box'>
-				<img src={"/image/" + data.name + ".png"} alt='mbti 사진' />
+				<img src={`${process.env.PUBLIC_URL}/image/${data.name}.png`} alt='mbti 사진' />
 			</div>
 			<div className='profile_description_content'>
 				<div className='profile_description_content_top'>
