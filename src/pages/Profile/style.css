@@ -147,7 +147,6 @@
 }
 #description {
   text-align: center;
-  min-height: 800px;
 }
 #character,
 #prosCons,
@@ -156,7 +155,7 @@
 #love,
 #chemistry {
   text-align: center;
-  height: 100vh;
+  height: auto;
   padding-top: 200px;
 }
 .profile_content_title {
@@ -200,7 +199,6 @@ li {
   #job,
   #love,
   #chemistry {
-    height: 100vh;
     padding-top: 100px;
   }
 }
