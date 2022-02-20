@@ -483,7 +483,7 @@ const data = [
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<Home data={data} />} />
         <Route path="/profiles/:username" element={<Profile data={data} />} />
