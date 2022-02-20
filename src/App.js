@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
 import './App.css'
@@ -483,10 +483,12 @@ const data = [
 
 function App() {
   return (
-    <Routes>
-      <Route exact path="/" element={<Home data={data} />} />
-      <Route path="/profiles/:username" element={<Profile data={data} />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home data={data} />} />
+        <Route path="/profiles/:username" element={<Profile data={data} />} />
+      </Routes>
+    </Router>
   )
 }
 
