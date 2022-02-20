@@ -484,7 +484,7 @@ const data = [
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home data={data} />} />
+      <Route exact path="/" element={<Home data={data} />} />
       <Route path="/profiles/:username" element={<Profile data={data} />} />
     </Routes>
   )
