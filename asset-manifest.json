@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/neul0129/mbti_project/static/css/main.3ef07e0b.css",
-    "main.js": "/neul0129/mbti_project/static/js/main.2a2266a2.js",
+    "main.js": "/neul0129/mbti_project/static/js/main.ff9ce1a8.js",
     "index.html": "/neul0129/mbti_project/index.html",
     "main.3ef07e0b.css.map": "/neul0129/mbti_project/static/css/main.3ef07e0b.css.map",
-    "main.2a2266a2.js.map": "/neul0129/mbti_project/static/js/main.2a2266a2.js.map"
+    "main.ff9ce1a8.js.map": "/neul0129/mbti_project/static/js/main.ff9ce1a8.js.map"
   },
   "entrypoints": [
     "static/css/main.3ef07e0b.css",
-    "static/js/main.2a2266a2.js"
+    "static/js/main.ff9ce1a8.js"
   ]
 }
