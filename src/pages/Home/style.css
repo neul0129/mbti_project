@@ -38,3 +38,13 @@
 .main_footer {
   font-size: 20px;
 }
+
+@media screen and (max-width: 500px) {
+	.main_container {
+		height: 180%;
+	}
+	.main_content{
+		display: flex;
+		flex-direction: column;
+	}
+}
