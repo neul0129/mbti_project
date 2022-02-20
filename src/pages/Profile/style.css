@@ -99,6 +99,7 @@
   text-align: center;
   height: 35px;
 }
+
 /* Mbti 설명에서 mbti부분 */
 .profile_mbti {
   padding-left: 15px;
@@ -201,4 +202,28 @@ li {
   #chemistry {
     padding-top: 100px;
   }
+}
+@media screen and (max-width: 500px) {
+	.profile_description{
+		flex-direction: column;
+		align-items: center;
+	}
+	.profile_image_box{
+		height: auto;
+		width: 100%;
+	}
+	.profile_image_box > img {
+		padding: 0px;
+	}
+	.profile_description_content {
+		margin: 25px 0px 0px 0px;
+	}
+	.profile_nickname {
+		font-size: 1.2em;
+		font-weight: 900;
+		padding-left: 5px;
+	}
+	.profile_personality_type > span {
+		font-size: 13px;
+	}
 }

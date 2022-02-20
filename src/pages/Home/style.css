@@ -41,10 +41,13 @@
 
 @media screen and (max-width: 500px) {
 	.main_container {
-		height: 180%;
+		height: auto;
 	}
 	.main_content{
 		display: flex;
 		flex-direction: column;
+	}
+	.main_footer {
+		font-size: 12px;
 	}
 }
