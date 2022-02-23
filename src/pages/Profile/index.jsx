@@ -147,7 +147,11 @@ function Character({ data }) {
         <div className="profile_content_title" style={{ color: data.color }}>
           특징
         </div>
-        <div className="character_content">{data.character}</div>
+        <ul>
+          {data.character.map((el, idx) => (
+            <li key={idx}>{el}</li>
+          ))}
+        </ul>
       </div>
     </>
   )
