@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mbti_project/static/css/main.3ef07e0b.css",
-    "main.js": "/mbti_project/static/js/main.3bbd1430.js",
+    "main.css": "/mbti_project/static/css/main.f58d9727.css",
+    "main.js": "/mbti_project/static/js/main.77abd8d3.js",
     "index.html": "/mbti_project/index.html",
-    "main.3ef07e0b.css.map": "/mbti_project/static/css/main.3ef07e0b.css.map",
-    "main.3bbd1430.js.map": "/mbti_project/static/js/main.3bbd1430.js.map"
+    "main.f58d9727.css.map": "/mbti_project/static/css/main.f58d9727.css.map",
+    "main.77abd8d3.js.map": "/mbti_project/static/js/main.77abd8d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ef07e0b.css",
-    "static/js/main.3bbd1430.js"
+    "static/css/main.f58d9727.css",
+    "static/js/main.77abd8d3.js"
   ]
 }
