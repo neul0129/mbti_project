@@ -64,7 +64,6 @@ function Header({ data }) {
               {data.name}
             </span>
             <span className="profile_title_description">: Know your MBTI</span>
-            <span className="profile_title_description">: Know</span>
           </div>
           <div>
             <button
