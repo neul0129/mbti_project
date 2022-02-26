@@ -33,7 +33,7 @@ const HeaderWrapper = styled.div`
       text-decoration: none;
       margin: 0px 40px;
       color: #fff;
-      line-height: 10vh;
+      line-height: 13vh;
     }
     .header_menuList > a:hover {
       border-bottom: 3px solid var(--subpage-font-color);
