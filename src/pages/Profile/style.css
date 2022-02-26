@@ -118,8 +118,6 @@
   padding-left: 7px;
   margin: 10px 0px;
 }
-/* 특징 */
-/* 특징 내용 */
 .prosContent {
   text-align: center;
 }
@@ -146,7 +144,6 @@
 #description {
   text-align: center;
 }
-#character,
 #prosCons,
 #fact,
 #job,
@@ -193,7 +190,6 @@ li {
   li {
     font-size: 5px;
   }
-  #character,
   #prosCons,
   #fact,
   #job,

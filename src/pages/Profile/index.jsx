@@ -81,7 +81,6 @@ function Header({ data }) {
             setIsToggled(!isToggled)
           }}>
           <a href="#description"> 성격유형</a>
-          <a href="#character"> 특징</a>
           <a href="#prosCons"> 장단점</a>
           <a href="#fact"> 팩폭</a>
           <a href="#job"> 직업</a>
@@ -96,7 +95,6 @@ function Navbar() {
   return (
     <div className="profile_navBar">
       <a href="#description"> 성격유형</a>
-      <a href="#character"> 특징</a>
       <a href="#prosCons"> 장단점</a>
       <a href="#fact"> 팩폭</a>
       <a href="#job"> 직업</a>
@@ -139,23 +137,7 @@ function Description({ data }) {
     </>
   )
 }
-// MBTI 특징 컴포넌트
-function Character({ data }) {
-  return (
-    <>
-      <div id="character">
-        <div className="profile_content_title" style={{ color: data.color }}>
-          특징
-        </div>
-        <ul>
-          {data.character.map((el, idx) => (
-            <li key={idx}>{el}</li>
-          ))}
-        </ul>
-      </div>
-    </>
-  )
-}
+
 // MBTI 장단점 컴포넌트
 function ProCons({ data, color }) {
   // 배열 : 1. 장점, 2. 단점
@@ -284,7 +266,6 @@ function Profile({ data }) {
       <div className="profile">
         <div className="profile_content">
           <Description data={profile} />
-          <Character data={profile} />
           <ProCons data={profile.prosCons} color={profile.color} />
           <Fact data={profile} />
           <Job data={profile} />
