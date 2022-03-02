@@ -6,6 +6,7 @@ import { FiChevronDown } from 'react-icons/fi'
 import './style.css'
 import { useState } from 'react'
 import styled from 'styled-components'
+
 const HeaderWrapper = styled.div`
   .profile_toggle {
     display: none;
@@ -103,8 +104,8 @@ function Navbar() {
     </div>
   )
 }
+
 // Mbti 설명 컴포넌트
-// MBTI 캐릭터 이미지 넣어야해요
 function Description({ data }) {
   return (
     <>
