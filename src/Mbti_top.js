@@ -3,7 +3,6 @@ const mbti_data = {
     name: 'ISTJ',
     nickname: '청렴결백한 논리주의자',
     description: '세상의 소금형',
-    character: "",
     prosCons: {
       '장점': ["맡은 일 처리에 있어서 신중하고 책임감있게 해결한다.",
               "집중력이 강하고 현실 감각이 뛰어나다.",
@@ -56,7 +55,6 @@ const mbti_data = {
     name: 'ISFJ',
     nickname: '용감한 수호자',
     description: '임금 뒷편의 권력형',
-    character: "",
     prosCons: {
       '장점': ["눈치가 빠르다",
               "공감능력",
@@ -110,7 +108,6 @@ const mbti_data = {
     name: 'INFJ',
     nickname: '선의의 옹호자',
     description: '예언자형',
-    character: "",
     prosCons: {
       '장점': ["강한 직관력으로 말없이 타인에게 영향력을 끼칩니다.", 
               "독창성과 내적 독립심이 강하며, 확고한 신념과 열정으로 자신의 영감을 구현시켜 나가는 정신적 지도자들이 많습니다. ",
@@ -167,7 +164,6 @@ const mbti_data = {
     name: 'INTJ',
     nickname: '용의주도한전략가',
     description: '과학자형',
-    character: "",
     prosCons: {
       '장점': ["새로운 지식과 경험에 대한 갈증", 
               "전략적, 계획적 사고와 행동력",
@@ -234,7 +230,6 @@ const mbti_data = {
     name: 'ISTP',
     nickname: '만능 재주꾼',
     description: '백과사전형',
-    character: "",
     prosCons: {
       '장점': ["적응력이 뛰어남", 
               "고정관념, 편견이 없음",
@@ -306,7 +301,6 @@ const mbti_data = {
     name: 'ISFP',
     nickname: '호기심 많은 예술가',
     description: '성인군자형',
-    character: "",
     prosCons: {
       '장점': ["끈기있음", 
               "인정이 많음",
@@ -382,7 +376,6 @@ const mbti_data = {
     name: 'INFP',
     nickname: '열정적인 중재자',
     description: '잔다르크형',
-    character: "",
     prosCons: {
       '장점': ["순수함", 
               "이타적인 성격",
@@ -455,7 +448,6 @@ const mbti_data = {
     name: 'INTP',
     nickname: '논리적인 사색가',
     description: '아이디어 뱅크형',
-    character: "",
     prosCons: {
       '장점': ["영리함", 
               "탁월한 문제 해결력",
